@@ -63,6 +63,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const client = createNakamaClient();
     const nextUserId = getUserId();
     const session = await client.authenticateCustom(nextUserId, true, nextUsername);
+    const nakamaUserId = String(session.user_id ?? nextUserId);
     const socket = client.createSocket(nakamaConfig.useSSL, false);
 
     socket.onmatchdata = (message: any) => {
@@ -101,7 +102,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     socketRef.current = socket;
     sessionRef.current = session;
     setUsername(nextUsername);
-    setUserId(nextUserId);
+    setUserId(nakamaUserId);
     setConnectionStatus("connected");
   }, []);
 
