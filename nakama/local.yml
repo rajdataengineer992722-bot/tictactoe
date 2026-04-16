@@ -1,4 +1,4 @@
-name: tictac-authoritative
+name: tictac-game
 data_dir: "./data/"
 
 logger:
