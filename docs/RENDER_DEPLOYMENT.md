@@ -57,6 +57,8 @@ Render will:
 
 The container startup script [nakama/start.sh](../nakama/start.sh) converts Render's Postgres URL to Nakama's expected `database.address` format, runs migrations, and starts the authoritative server.
 
+The Render blueprint uses an explicit HTTP health check on `/`.
+
 ## 5. Get The Nakama Hostname
 
 After deploy, open the `tictac-nakama` service in Render.
