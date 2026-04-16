@@ -1,0 +1,12 @@
+node_modules
+.next
+build
+dist
+.env
+.env.local
+*.log
+frontend/dev.stdout.log
+frontend/dev.stderr.log
+*.tsbuildinfo
+nakama/data
+!.env.local.example

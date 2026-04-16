@@ -1,0 +1,19 @@
+name: tictac-authoritative
+data_dir: "./data/"
+
+logger:
+  level: "INFO"
+
+console:
+  username: "admin"
+  password: "password"
+
+socket:
+  server_key: "defaultkey"
+
+runtime:
+  path: "/nakama/data/build"
+  js_entrypoint: "main.js"
+
+matchmaker:
+  max_tickets: 2
